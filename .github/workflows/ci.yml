@@ -24,7 +24,7 @@ on:
           run: conda list
 
         - name: Verify packages
-          run: |
+          run: pytest tests/
             python -c "import numpy, pandas, sklearn; print("Packages installed successfully") 
         
        
