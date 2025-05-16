@@ -16,7 +16,7 @@ jobs:
       - name: Create environment from file
         run: conda env create -f env.yml
 
-      - name: Activate environment
+      - name: activate environment
         run: conda activate env
         
       - name: Check Conda environment
