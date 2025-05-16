@@ -24,6 +24,6 @@ jobs:
 
       - name: Verify packages
         run: |
-          python -c "Import numpy, pandas, sklearn; print("Packages installed successfully")"
+          python -c "import numpy, pandas, sklearn; print("Packages installed successfully")"
         
        
