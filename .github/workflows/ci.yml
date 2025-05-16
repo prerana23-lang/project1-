@@ -24,10 +24,6 @@ jobs:
 
       - name: Verify packages
         run: |
-            call activate env
-            conda list numpy
-            conda list pandas
-            conda list sklearn
-            print("Packages installed successfully") 
+          python -c "Import numpy, pandas, sklearn; print("Packages installed successfully")"
         
        
