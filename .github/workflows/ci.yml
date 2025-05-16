@@ -18,6 +18,12 @@ jobs:
         with:
           python-version: "3.10"
           activate-environment: env
+
+      - name: Verify environment
+        run: |
+          conda info
+          conda list
+          conda env list
         
       - name: Check Conda environment
         run: conda list
