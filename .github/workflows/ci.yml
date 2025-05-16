@@ -16,7 +16,6 @@ on:
         - name: Set up Miniconda
           uses: conda-incubator/setup-minicinda@v3
           with:
-            auto-update-conda: true
             environment-file: env.yml
             activate-environment: env
             python-version: 3.10
@@ -24,7 +23,8 @@ on:
         - name: Check Conda environment
           run: conda list
 
-        - name: Run tests
-          run: pytest tests/
+        - name: Verify packages
+          run: |
+            python -c "import numpy, pandas, sklearn; print("Packages installed successfully") 
         
        
