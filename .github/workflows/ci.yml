@@ -13,13 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Miniconda
-        uses: conda-incubator/setup-miniconda@v3
-        with:
-          environment-file: env.yml
-          activate-environment: env
-          python-version: 3.10
+      - name: Create environment from file
+        run: conda env create -f env.yml
 
+      - name: Activate environment
+        run: conda Activate env
+        
       - name: Check Conda environment
         run: conda list
 
